@@ -13,11 +13,11 @@ public class RoleDB implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ROLE_ID")
     private Integer id;
-    @Column(name = "ROLE_NAME")
+    @Column(name = "APP_ROLE")
+    @Enumerated(EnumType.STRING)
     private ApplicationRole applicationRole;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_ID")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_ID", referencedColumnName = "ID")
     private UserDB user;
 }

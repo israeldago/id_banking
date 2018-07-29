@@ -9,14 +9,12 @@ import java.util.Collection;
 @Entity
 @Table(name = "USERS")
 @XmlRootElement
-@Data
+@Data @ToString(exclude = "rolesCollection")
 @Builder
-@NoArgsConstructor
 public class UserDB implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "USER_ID")
     private Integer id;
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -26,9 +24,7 @@ public class UserDB implements java.io.Serializable {
     private LocalDate dateOfBirth;
     @Column(name = "IDENTITY_CARD_NUMBER")
     private String identityCardNumber;
-    @Column(name = "USERNAME")
     private String username;
-    @Column(name = "PASSWORD")
     private String password;
     @Column(name = "REGISTRATION_DATE")
     private LocalDateTime registrationDate;

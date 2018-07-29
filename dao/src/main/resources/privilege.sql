@@ -1,0 +1,3 @@
+--CREATE DATABASE IF NOT EXISTS id_banking_db;
+--CREATE USER IF NOT EXISTS 'idBankingUser'@'localhost' IDENTIFIED BY '12345';
+--GRANT ALL ON id_banking_db.* to 'idBankingUser'@'localhost';
