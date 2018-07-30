@@ -10,3 +10,4 @@ spring:
     username: idBankingUser
     password: 12345
     initialization-mode: ALWAYS
+    validationQuery: SELECT 1

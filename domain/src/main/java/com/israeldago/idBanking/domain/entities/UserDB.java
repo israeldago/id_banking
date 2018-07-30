@@ -1,4 +1,4 @@
-package com.israeldago.idBanking.domain.entities.db;
+package com.israeldago.idBanking.domain.entities;
 
 import lombok.*;
 import javax.persistence.*;

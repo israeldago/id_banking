@@ -1,4 +1,4 @@
-package com.israeldago.idBanking.domain.enums;
+package com.israeldago.idBanking.common.enums;
 
 public enum ApplicationRole {
     EMPLOYEE,CLIENT,ADMINISTRATOR

@@ -1,6 +1,6 @@
-package com.israeldago.idBanking.domain.entities.db;
+package com.israeldago.idBanking.domain.entities;
 
-import com.israeldago.idBanking.domain.enums.ApplicationRole;
+import com.israeldago.idBanking.common.enums.ApplicationRole;
 import lombok.Data;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;

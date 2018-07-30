@@ -17,7 +17,8 @@
 		<module>itf</module>
 		<module>business</module>
 		<module>web</module>
-	</modules>
+		<module>common</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
