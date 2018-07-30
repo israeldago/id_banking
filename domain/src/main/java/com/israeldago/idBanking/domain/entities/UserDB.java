@@ -2,13 +2,11 @@ package com.israeldago.idBanking.domain.entities;
 
 import lombok.*;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.time.*;
 import java.util.Collection;
 
 @Entity
 @Table(name = "USERS")
-@XmlRootElement
 @Data @ToString(exclude = "rolesCollection")
 @Builder
 public class UserDB implements java.io.Serializable {

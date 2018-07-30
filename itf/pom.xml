@@ -11,5 +11,11 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-
+<dependencies>
+    <dependency>
+        <groupId>com.israeldago</groupId>
+        <artifactId>common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+</dependencies>
 </project>
