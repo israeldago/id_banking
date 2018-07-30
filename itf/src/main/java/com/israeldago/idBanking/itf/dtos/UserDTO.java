@@ -7,7 +7,7 @@ import java.time.*;
 @XmlRootElement
 @Value
 @Builder
-public class UserDTO {
+public class UserDTO implements java.io.Serializable{
     private int id;
     private String firstName;
     private String lastName;

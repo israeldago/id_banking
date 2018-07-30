@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Value
-public class RoleDTO {
+public class RoleDTO implements java.io.Serializable{
     private int id;
     private ApplicationRole applicationRole;
     private UserDTO user;
