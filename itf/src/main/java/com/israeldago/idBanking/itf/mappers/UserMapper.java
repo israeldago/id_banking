@@ -5,7 +5,7 @@ import com.israeldago.idBanking.itf.dtos.UserDTO;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserMapper implements java.io.Serializable {
+public class UserMapper {
 
     public UserDTO mapToDTO(UserDB userDB){
         return UserDTO.builder()

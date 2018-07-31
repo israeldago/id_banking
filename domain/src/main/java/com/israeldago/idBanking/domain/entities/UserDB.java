@@ -1,5 +1,6 @@
 package com.israeldago.idBanking.domain.entities;
 
+import com.israeldago.idBanking.common.helpers.AppSerializer;
 import lombok.*;
 import javax.persistence.*;
 import java.time.*;
@@ -10,6 +11,7 @@ import java.util.Collection;
 @Data @ToString(exclude = "rolesCollection")
 @Builder
 public class UserDB implements java.io.Serializable {
+    private static final long serialVersionUID = AppSerializer.serialVersionUID;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RoleMapper implements java.io.Serializable {
+public class RoleMapper {
     @Autowired
     private UserMapper userMapper;
 

@@ -1,5 +1,6 @@
 package com.israeldago.idBanking.itf.dtos;
 
+import com.israeldago.idBanking.common.helpers.AppSerializer;
 import lombok.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.*;
@@ -8,6 +9,8 @@ import java.time.*;
 @Value
 @Builder
 public class UserDTO implements java.io.Serializable{
+    private static final long serialVersionUID = AppSerializer.serialVersionUID;
+
     private int id;
     private String firstName;
     private String lastName;
