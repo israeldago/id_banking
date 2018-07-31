@@ -35,13 +35,13 @@
     </dependencies>
 
     <build>
+        <finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>${parent.artifactId}-${parent.version}</finalName>
     </build>
 
 </project>
