@@ -1,18 +1,29 @@
 package com.israeldago.idBanking.common.exceptions;
 
+import com.israeldago.idBanking.common.enums.ErrorCode;
+
+import java.util.Objects;
+
 abstract class AppException extends RuntimeException {
 
-     AppException() {}
+    private ErrorCode errorCode;
 
-     AppException(String desc) {
-        super(desc);
+    AppException() {}
+
+    AppException(ErrorCode errorCode,Throwable throwable) {
+        this(errorCode,throwable,"");
     }
 
-     AppException(String desc, Throwable throwable) {
+    AppException(ErrorCode errorCode, Throwable throwable, String desc) {
         super(desc, throwable);
+         this.errorCode = Objects.requireNonNull(errorCode);
     }
 
-     AppException(Throwable throwable) {
-        super(throwable);
+    public ErrorCode getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(ErrorCode errorCode) {
+        this.errorCode = Objects.requireNonNull(errorCode);
     }
 }
