@@ -2,12 +2,13 @@ package com.israeldago.idBanking.itf.mappers;
 
 import com.israeldago.idBanking.domain.entities.UserDB;
 import com.israeldago.idBanking.itf.dtos.UserDTO;
+import lombok.NonNull;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper {
 
-    public UserDTO mapToDTO(UserDB userDB){
+    public UserDTO mapToDTO(@NonNull UserDB userDB){
         return UserDTO.builder()
                 .id(userDB.getId())
                 .firstName(userDB.getFirstName())
@@ -20,7 +21,7 @@ public class UserMapper {
                 .build();
     }
 
-    public UserDB mapToDB(UserDTO userDTO){
+    public UserDB mapToDB(@NonNull UserDTO userDTO){
         return UserDB.builder()
                 .id(userDTO.getId())
                 .firstName(userDTO.getFirstName())
