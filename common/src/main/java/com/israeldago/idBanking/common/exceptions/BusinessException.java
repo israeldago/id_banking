@@ -3,11 +3,12 @@ package com.israeldago.idBanking.common.exceptions;
 import com.israeldago.idBanking.common.enums.ErrorCode;
 
 public class BusinessException extends AppException {
-    public BusinessException() {
+    public BusinessException(ErrorCode errorCode) {
+        super(errorCode);
     }
 
-    public BusinessException(ErrorCode errorCode, Throwable throwable) {
-        super(errorCode, throwable);
+    public BusinessException(ErrorCode errorCode, String desc) {
+        super(errorCode, desc);
     }
 
     public BusinessException(ErrorCode errorCode, Throwable throwable, String desc) {

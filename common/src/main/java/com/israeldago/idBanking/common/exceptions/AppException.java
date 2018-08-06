@@ -8,10 +8,10 @@ abstract class AppException extends RuntimeException {
 
     private ErrorCode errorCode;
 
-    AppException() {}
+    AppException(ErrorCode errorCode) {this(errorCode,null,"");}
 
-    AppException(ErrorCode errorCode,Throwable throwable) {
-        this(errorCode,throwable,"");
+    AppException(ErrorCode errorCode,String desc) {
+        this(errorCode,null,desc);
     }
 
     AppException(ErrorCode errorCode, Throwable throwable, String desc) {
