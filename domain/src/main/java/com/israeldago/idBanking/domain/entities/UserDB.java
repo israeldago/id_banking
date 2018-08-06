@@ -1,17 +1,17 @@
 package com.israeldago.idBanking.domain.entities;
 
+import com.israeldago.idBanking.common.helpers.AppSerializer;
 import lombok.*;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.time.*;
 import java.util.Collection;
 
 @Entity
 @Table(name = "USERS")
-@XmlRootElement
 @Data @ToString(exclude = "rolesCollection")
 @Builder
 public class UserDB implements java.io.Serializable {
+    private static final long serialVersionUID = AppSerializer.serialVersionUID;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

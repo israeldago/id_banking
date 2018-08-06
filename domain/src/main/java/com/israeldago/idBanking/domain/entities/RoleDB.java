@@ -1,6 +1,7 @@
 package com.israeldago.idBanking.domain.entities;
 
 import com.israeldago.idBanking.common.enums.ApplicationRole;
+import com.israeldago.idBanking.common.helpers.AppSerializer;
 import lombok.Data;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Data
 public class RoleDB implements java.io.Serializable {
+    private static final long serialVersionUID = AppSerializer.serialVersionUID;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
