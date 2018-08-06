@@ -11,3 +11,5 @@ spring:
     password: 12345
     initialization-mode: ALWAYS
     validationQuery: SELECT 1
+
+users.api: http://localhost:8081/appUsersWS/api/users/
