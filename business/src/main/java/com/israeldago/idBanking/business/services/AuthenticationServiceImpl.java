@@ -23,7 +23,7 @@ public class AuthenticationServiceImpl  implements AuthenticationService {
     private RestTemplate restTemplate;
     @Autowired
     private UserMapper userMapper;
-    @Value("${users.usersApi}")
+    @Value("${users.api}")
     private String usersApi;
 
     @Override
@@ -33,7 +33,7 @@ public class AuthenticationServiceImpl  implements AuthenticationService {
             return userMapper.mapToDTO(userDB);
         }
         UserDTO userDTO = restTemplate.getForEntity(usersApi + username, UserDTO.class).getBody();
-        usersRepository.save(userMapper.mapToDB(userDTO));
+        usersRepository.saveAndFlush(userMapper.mapToDB(userDTO));
         return userDTO;
     }
 
