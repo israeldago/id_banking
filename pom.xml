@@ -12,13 +12,9 @@
 	<description>Internet Banking Simulator</description>
 
 	<modules>
-		<module>domain</module>
-		<module>dao</module>
-		<module>itf</module>
-		<module>business</module>
-		<module>web</module>
-		<module>common</module>
-    </modules>
+		<module>backend</module>
+		<module>frontend</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -36,11 +32,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -56,4 +47,5 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 </project>
