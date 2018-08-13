@@ -17,6 +17,7 @@
 		<module>itf</module>
 		<module>business</module>
 		<module>common</module>
+		<module>launcher</module>
     </modules>
 
 	<dependencies>
