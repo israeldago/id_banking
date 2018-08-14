@@ -1,0 +1,2 @@
+users.api: http://localhost:8081/appUsersWS/api/users/
+spring.output.ansi.enabled: ALWAYS
