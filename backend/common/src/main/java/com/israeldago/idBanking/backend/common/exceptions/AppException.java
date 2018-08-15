@@ -4,7 +4,7 @@ import com.israeldago.idBanking.backend.common.enums.ErrorCode;
 
 import java.util.Objects;
 
-abstract class AppException extends RuntimeException {
+public abstract class AppException extends RuntimeException {
 
     private ErrorCode errorCode;
 

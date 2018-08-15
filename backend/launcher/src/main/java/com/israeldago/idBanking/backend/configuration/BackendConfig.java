@@ -27,15 +27,15 @@ public class BackendConfig {
     private String usersApi;
 
     @Bean(name = "/authService")
-    public HttpInvokerServiceExporter authenticationServiceExporter(){
+    HttpInvokerServiceExporter authenticationServiceExporter(){
         HttpInvokerServiceExporter exporter = new HttpInvokerServiceExporter();
         exporter.setServiceInterface(AuthenticationService.class);
-        exporter.setService(new AuthenticationServiceImpl(usersRepository, restTemplateBuilder.build(), roleMapper, userMapper, usersApi));
+        exporter.setService(authenticationService());
         return exporter;
     }
 
     @Bean
-    public AuthenticationService authenticationService(){
+    AuthenticationService authenticationService(){
         return new AuthenticationServiceImpl(usersRepository, restTemplateBuilder.build(), roleMapper, userMapper, usersApi);
     }
 }

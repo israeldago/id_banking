@@ -1,0 +1,5 @@
+app.name: idBanking
+server:
+  port: 9696
+  servlet.context-path: /${app.name}
+spring.output.ansi.enabled: ALWAYS
