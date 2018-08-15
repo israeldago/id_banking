@@ -2,6 +2,7 @@ package com.israeldago.idBanking.backend.configuration;
 
 import com.israeldago.idBanking.backend.business.services.AuthenticationServiceImpl;
 import com.israeldago.idBanking.backend.dao.repositories.UsersRepository;
+import com.israeldago.idBanking.backend.itf.mappers.RoleMapper;
 import com.israeldago.idBanking.backend.itf.mappers.UserMapper;
 import com.israeldago.idBanking.backend.itf.services.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class BackendConfig {
     private RestTemplateBuilder restTemplateBuilder;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private RoleMapper roleMapper;
     @Value("${users.api}")
     private String usersApi;
 
@@ -27,7 +30,12 @@ public class BackendConfig {
     public HttpInvokerServiceExporter authenticationServiceExporter(){
         HttpInvokerServiceExporter exporter = new HttpInvokerServiceExporter();
         exporter.setServiceInterface(AuthenticationService.class);
-        exporter.setService(new AuthenticationServiceImpl(usersRepository, restTemplateBuilder.build(), userMapper, usersApi));
+        exporter.setService(new AuthenticationServiceImpl(usersRepository, restTemplateBuilder.build(), roleMapper, userMapper, usersApi));
         return exporter;
+    }
+
+    @Bean
+    public AuthenticationService authenticationService(){
+        return new AuthenticationServiceImpl(usersRepository, restTemplateBuilder.build(), roleMapper, userMapper, usersApi);
     }
 }
